@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+:root{
+    --bodyFont: 'Bai Jamjuree', sans-serif;    
+    --bodyColor: hsl(0, 0%, 100%);
+    --titlesColor: hsl(210, 10%, 33%);
+    --textsColor: hsl(201, 11%, 66%);
+    --blue: hsl(233, 100%, 69%);
+    --cyan: hsl(171, 66%, 44%);
+    --bodySize: 1.8rem;
+    --pd5: 5rem;
+    --mg5: 5rem;
+    --gap25: 2.5rem;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--bodyColor);
+    font-family: var(--bodyFont);
+    font-size: var(--bodySize);
+    color: var(--textsColor);
+    line-height: 1.4;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+svg{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+/*Home*/
+.home{
+    background: url(../img/bg-header-mobile.png) center center/cover no-repeat;
+    padding: var(--pd5) 0;
+}
+@media (min-width: 768px) { 
+    .home{
+        background: url(../img/bg-header-desktop.png) center center/cover no-repeat;
+        padding: calc(var(--pd5) * 2) 0;
+    }
+}
+.home__content{
+    text-align: center;
+}
+.home__logo{
+    margin: 0 auto;
+}
+@media (min-width: 768px) { 
+    .home__logo{
+        height: 15rem;
+        width: 15rem;
+    }
+}
+.home__title{
+    color: var(--titlesColor);
+    margin: var(--mg5) 0;
+    font-size: 3rem;
+}
+@media (min-width: 768px) { 
+    .home__title{
+        font-size: 5rem;
+    }
+}
+.home__paragraph{
+    max-width: 65rem;
+    margin: 0 auto calc(var(--mg5) / 2) auto;
+}
+@media (min-width: 768px) { 
+    .home__paragraph{
+        font-size: 2rem;
+    }
+}
+.home__buttons{
+    display: inline-grid;
+    gap: var(--gap25);
+}
+@media (min-width: 768px) { 
+    .home__buttons{
+        display: inline-flex;
+        gap: calc(var(--gap25) * 2);
+        justify-content: center;
+    }
+}
+.home__button{
+    display: inline-block;
+    padding: 1.5rem 5rem;
+    color: var(--bodyColor);
+    border-radius: 3rem;
+    font-weight: 600;
+}
+.home__button--ios{
+    background-color: var(--cyan);
+}
+.home__button--mac{
+    background-color: var(--blue);
+}
+/*Snippets*/
+.snippets{
+    padding: var(--pd5) 0;
+}
+.snippets__content{
+    display: grid;
+    gap: var(--gap25);
+}
+@media (min-width: 768px) { 
+    .snippets__content{
+        gap: calc(var(--gap25) * 2);
+    }
+}
+.snippets__texts{
+    text-align: center;
+}
+.snippets__title{
+    color: var(--titlesColor);
+    margin: 0 0 calc(var(--mg5) / 2);
+    font-size: 3rem;
+}
+@media (min-width: 768px) { 
+    .snippets__paragraph{
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+}
+.snippets__data{
+    display: grid;
+    gap: var(--gap25);
+}
+@media (min-width: 768px) { 
+    .snippets__data{
+        gap: calc(var(--gap25) * 2);
+        align-items: center;
+        grid-template-columns: max-content 1fr;
+    }
+}
+@media (min-width: 768px) { 
+    .snippets__img{
+        width: 60rem;
+        transform: translateX(-10rem);
+    }
+}
+.snippets__characteristics{
+    display: grid;
+    gap: var(--gap25);
+}
+.snippets__subtitle{
+    color: var(--titlesColor);
+    margin: 0 0 calc(var(--mg5) / 2);
+    font-size: 2.4rem;
+}
+/*Accsess*/
+.access{
+    padding: var(--pd5) 0;
+}
+.access__content{
+    text-align: center;
+    display: grid;
+    gap: var(--gap25);
+    justify-content: center;
+}
+.access__title{
+    color: var(--titlesColor);
+    margin: 0 0 2.5rem;
+    font-size: 3rem;
+}
+@media (min-width: 768px) { 
+    .access__paragraph{
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+}
+/*Workflow*/
+.workflow{
+    padding: var(--pd5) 0;
+}
+.workflow__content{
+    display: grid;
+    gap: var(--gap25);
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .workflow__content{
+        gap: calc(var(--gap25) * 2);
+    }
+}
+.workflow__title{
+    color: var(--titlesColor);
+    font-size: 3rem;
+    margin: 0 0 2.5rem;
+}
+.workflow__cards{
+    display: grid;
+    gap: calc(var(--gap25) * 2);
+}
+@media (min-width: 768px) { 
+    .workflow__cards{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.workflow__img{
+    margin: 0 auto;
+}
+.workflow__subtitle{
+    color: var(--titlesColor);
+}
+/*Bussiness*/
+.bussiness{
+    padding: calc(var(--pd5) * 2) 0;
+}
+.bussiness__images{
+    display: grid;
+    gap: calc(var(--gap25) * 2);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 18rem);
+}
+/*Apps*/
+.apps{
+    padding: calc(var(--pd5) * 2) 0;
+}
+.apps__content{
+    text-align: center;
+}
+.apps__title{
+    color: var(--titlesColor);
+    margin-bottom: calc(var(--mg5) / 2);
+}
+.apps__paragraph{
+    margin: 0 auto var(--mg5) auto;
+    max-width: 70rem;
+}
+.apps__buttons{
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+}
+.apps__button{
+    color: var(--bodyColor);
+    display: inline-block;
+    padding: 1.6rem 5rem;
+    border-radius: 3rem;
+    font-weight: 600;
+}
+.apps__button--ios{
+    background-color: var(--cyan);
+    box-shadow: 4px 4px 8px rgba(38, 186, 164, 0.6), inset -4px -4px 0px rgba(0, 0, 0, 0.25);
+}
+.apps__button--mac{
+    background-color: var(--blue);
+    box-shadow: 4px 4px 8px rgba(97, 115, 255, 0.6), inset -4px -4px 0px rgba(0, 0, 0, 0.25);
+}
+/*Footer*/
+.footer{
+    background-color: rgb(243 247 250);
+    padding: var(--pd5) 0;
+}
+@media (min-width: 768px) { 
+    .footer__grid{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+.footer__logo{
+    height: 5rem;
+    width: 5rem;
+    margin: 0 auto var(--mg5) auto;
+}
+.footer__list{
+    display: grid;
+    gap: var(--gap25);
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .footer__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.footer__link{
+    color: var(--titlesColor);
+    font-weight: 600;
+}
+.footer__social{
+    display: flex;
+    gap: var(--gap25);
+    justify-content: center;
+    margin-top: var(--mg5);
+}
